@@ -21,13 +21,13 @@
 
 """ 40. Use is not to compare two different object types (e.g., a list and a tuple)."""
 
-ls1 = "apple mango orange"
-ls2 = "apple mango orange"
-ls3 = "apple mango jack fruit"
-ls4 = "apple mango Orange"
-print (ls1 is not ls2)
-print (ls1 is not ls3)
-print (ls1 is not ls4)
+# ls1 = "apple mango orange"
+# ls2 = "apple mango orange"
+# ls3 = "apple mango jack fruit"
+# ls4 = "apple mango Orange"
+# print (ls1 is not ls2)
+# print (ls1 is not ls3)
+# print (ls1 is not ls4)
 
 """ 41. Check if a key exists in a dictionary using the in operator."""
 """ 42. Use not in to verify a username is NOT already in a list of banned users."""
