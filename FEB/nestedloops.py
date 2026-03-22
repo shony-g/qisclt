@@ -1,8 +1,5 @@
 """Nested for loop"""
-# for i in range(0,3):
-#         for j in range(0,3):
-#             print(i,j)
-#         print()
+
              
 # for i in range(1,5):
 #         for j in range(i):
@@ -136,7 +133,12 @@
     
 
 
-  
+# num1 = 0 
+# for i in range(0,5,1):
+#     for j in range(i):
+#         print(f"{num1}",end=" ")
+#         num1+=1
+#     print() 
 
 
 

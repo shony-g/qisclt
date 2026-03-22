@@ -51,4 +51,4 @@
 #         print(j,end=" ")
 #     print()
 
-row = 6
+# row = 6
