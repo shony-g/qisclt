@@ -1,16 +1,3 @@
-""" 
-Section 4: Logical / Problem Solving
-46. Given a list of numbers, move all zeros to the end while maintaining order.
-47. Find the first non-repeating element in a list.
-48. Find the highest frequency element in a list.
-49. Find all pairs whose sum equals a given target value.
-50. Write a program to detect duplicates in a list.
-51. Given two lists, determine whether they contain the same elements regardless of order.
-52. Write a program to partition a list into even and odd numbers.
-53. Implement bubble sort using lists.
-54. Implement selection sort using lists.
-55. Write a program to remove consecutive duplicate elements."""
-
 """ ############ Section 1: Beginner Level ##########"""
 
 """ 1. Create a list of five integers and print all elements using a for loop."""
@@ -410,31 +397,131 @@ Section 4: Logical / Problem Solving
 
 """ Section 3: Advanced Level """
 
-""" 31. Implement a matrix using nested lists and print it in matrix format.
-32. Write a program to add two matrices using nested lists.
-33. Write a program to transpose a matrix.
-34. Flatten a 2D list into a single list using list comprehension.
-35. Find the largest sublist length in a nested list.
-36. Write a program to find the intersection of multiple lists.
-37. Write a program to group list elements by their length (strings).
-38. Implement a simple stack using a Python list.
-39. Implement a queue using a Python list.
-40. Write a program to shuffle elements in a list.
-41. Write a program to find the kth largest element in a list.
-42. Write a program to check whether a list is a palindrome.
-43. Write a program to generate all possible pairs from a list.
-44. Create a list of prime numbers within a given range using list comprehension.
-45. Write a program to remove all negative numbers from a list."""
+""" 31. Implement a matrix using nested lists and print it in matrix format."""
+# lst = [[2,4,6],[8,5,3],[9,0,1]]
 
-""" 44. Create a list of prime numbers within a given range using list comprehension."""
+# for x in lst:
+#     print(x)
 
+""" 32. Write a program to add two matrices using nested lists."""
+# lst1 = [[2,4,6],[8,5,3],[9,0,1]]
 
+# lst2 = [[10,12,14],[15,16,17],[20,21,22]]
 
-""" 45. Write a program to remove all negative numbers from a list."""
+# s =[]
 
-# lst = [1,2,3,-4,-6]
+# for x in range (len(lst1)):
+#     b = []
+#     for y in range (len(lst2)):
+#         a= lst1[x][y] + lst2[x][y]
+#         b.append(a)
+        
+#     s.append(b)
 
-# print(lst)
-# s=[x for x in lst if x>=0]
+# for i in s:
+#     print(i)
+
+""" 33. Write a program to transpose a matrix."""
+
+# lst1 = [[2,4,6],[8,5,3]]
+
+# s =[]
+# c = len(lst1[0])
+
+# for x in range (c):
+#     b = []
+#     for y in range (len(lst1)):
+#         a= lst1[y][x]
+#         b.append(a)
+        
+#     s.append(b)
+
+# for i in s:
+#     print(i)
+
+""" 34. Flatten a 2D list into a single list using list comprehension."""
+
+# lst1 = [[2,4,6],[8,5,3],[9,0,1]]
+
+# s =[]
+
+# for x in lst1:
+#     for y in x:
+#         s.append(y)
 
 # print(s)
+
+""" 35. Find the largest sublist length in a nested list."""
+
+# lst = [1,3,[5,6,],[7,8,9,0,6,4,2],6,7,[1,2,3]]
+
+# a=0
+# b=[]
+
+# for x in lst:
+#     if type(x)==list:
+#         if len(x)>a:
+#             a=len(x)
+#             b=x.copy()
+
+# print(f"the list {a} ithems and the list is {b}")
+
+""" 36. Write a program to find the intersection of multiple lists."""
+# lst1 = [2,4,6,[5,6],9,20,0,1]
+
+# lst2 = [10,20,12,6,14,[5,6],[20,21,22]]
+
+# lst3 = [1,3,[5,6,],[7,8,9,0,6,4,2],6,20,7,[1,2,3]]
+
+# s=[]
+
+# for x in lst3:
+#     if x in lst2:
+#         if x in lst1:
+#             s.append(x)
+
+# print(f"The intersection item is:{s}")
+
+""" 37. Write a program to group list elements by their length (strings)."""
+
+# lst = [[10,20],"shony",[5,6],"priyanka",[20,21,22],3,8]
+
+# s=[]
+# num = []
+# other =[]
+
+# for x in lst:
+#     if type(x)==list or type(x)==str:
+#         other.append(x)
+#     else:
+#         num.append(x)
+
+# other.sort(key=len)
+# s= num + other
+# print(s)
+
+""" 38. Implement a simple stack using a Python list."""
+# s=[]
+# s.append(10)
+# s.append(20)
+# s.append(30)
+
+# print(f"The stack after insert {s}")
+
+# filo=s.pop()
+# print(f"Popped element {filo}")
+# print(f"The remaing part {s}")
+
+""" 39. Implement a queue using a Python list."""
+
+# s=[]
+# s.append(10)
+# s.append(20)
+# s.append(30)
+
+# print(f"The stack after insert {s}")
+
+# filo=s.pop(0)
+# print(f"Popped element {filo}")
+# print(f"The remaing part {s}")
+
