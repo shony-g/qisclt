@@ -1,8 +1,84 @@
+""" 40. Write a program to shuffle elements in a list."""
+# my_List = input("Enter values seerated by space:").split()
+# lst =[int(x) if x.isdigit() else x for x in my_List]
+# import random
+
+# print(lst)
+
+# random.shuffle(lst)
+
+# print(lst)
+
+""" 41. Write a program to find the kth largest element in a list."""
+
+# my_List = input("Enter values seerated by space:").split()
+# lst =[int(x) if x.isdigit() else x for x in my_List]
+# print(lst)
+
+# num = int(input(" K th largest, please input K:"))
+
+# lst2 = list(set(lst))
+
+# lst2.sort()
+
+# print(f"the {num}th largest is :{lst2[-1*num]}")
+
+""" 42. Write a program to check whether a list is a palindrome."""
+
+# my_List = input("Enter values seerated by space:").split()
+# lst =[int(x) if x.isdigit() else x for x in my_List]
+# print(lst)
+
+# num = len(lst)//2
+# flag = True
+# for i in range(num):
+#     if lst[i]!=lst[len(lst)-i-1]:
+#         flag=False
+#         break
+# if flag:
+#     print("palindrome")
+# else:
+#     print("Not a palindrome")
+
+# lst2 = lst[::-1]
+# if lst==lst2:
+#     print("palindrome")
+# else:
+#     print("Not a palindrome")
+
+""" 43. Write a program to generate all possible pairs from a list."""
+
+# my_List = input("Enter values seerated by space:").split()
+# lst =[int(x) if x.isdigit() else x for x in my_List]
+# print(lst)
+
+# lst2 = [(lst[i],lst[j]) for i in range(len(lst)) for j in range(i+1, len(lst))]
+
+# print(lst2)
+
+""" 45. Write a program to remove all negative numbers from a list."""
+
+# num = int(input(" Please enter the range:"))
+
+# lst=[x for x in range(1,num) if x/num !=0 for num in range(2,int(x**0.5))]
+
+# print(lst)
+
+# lst = [1 ,2,5,8,-1,5,-3,9,-8]
+
+# s=[]
+
+# for x in lst:
+#     if x >=0:
+#         s.append(x)
+
+# print(s)
+
 """ 
 Section 4: Logical / Problem Solving
+44. Create a list of prime numbers within a given range using list comprehension.
 46. Given a list of numbers, move all zeros to the end while maintaining order.
-47. Find the first non-repeating element in a list.
-48. Find the highest frequency element in a list.
+
 49. Find all pairs whose sum equals a given target value.
 50. Write a program to detect duplicates in a list.
 51. Given two lists, determine whether they contain the same elements regardless of order.
@@ -11,43 +87,30 @@ Section 4: Logical / Problem Solving
 54. Implement selection sort using lists.
 55. Write a program to remove consecutive duplicate elements."""
 
-""" 40. Write a program to shuffle elements in a list."""
+""" 47. Find the first non-repeating element in a list."""
+
 # my_List = input("Enter values seerated by space:").split()
 # lst =[int(x) if x.isdigit() else x for x in my_List]
-
-# print(dir(lst))
-
-# lst2 = set(lst)
-
-# print(lst2)
-
-""" 41. Write a program to find the kth largest element in a list."""
-
-""" 
-
-42. Write a program to check whether a list is a palindrome.
-43. Write a program to generate all possible pairs from a list.
-
-"""
-
-""" 44. Create a list of prime numbers within a given range using list comprehension."""
-
-# s = [1,2,3,4,5,6,7,8,9,10]
-
-# b=[n for n in range(1,20) if n%i !=0 for i in range(2, int(n**0.5)+1)]
-
-# print(b)
-# ****
-
-        
-
-
-    
-""" 45. Write a program to remove all negative numbers from a list."""
-
-# lst = [1,2,3,-4,-6]
-
 # print(lst)
-# s=[x for x in lst if x>=0]
 
-# print(s)
+
+# for x in lst:
+#     if lst.count(x) ==1:
+#         print(f"{x} is the first non repeating element in a list")
+#         break
+
+""" 48. Find the highest frequency element in a list."""
+
+# my_List = input("Enter values seerated by space:").split()
+# lst =[int(x) if x.isdigit() else x for x in my_List]
+# print(lst)
+
+# a=0
+# b=0
+
+# for x in lst:
+#     if lst.count(x)>a:
+#         b=x
+#         a=lst.count(x)
+
+# print(f"highest frequency {a} element in a list is {b}")
