@@ -271,24 +271,120 @@
 # print(set2)
 # print(set1.isdisjoint(set2))
 
-""" 
-Section 4 – Logical Set Problems
-31. Write a program to find common elements between two lists using sets.
-32. Write a program to find unique elements from two lists.
-33. Write a program to find elements present in the first list but not in the second list.
-34. Write a program to remove duplicates from a sentence using sets.
-35. Write a program to find unique characters in a string using sets.
-36. Write a program to count unique words in a sentence.
-37. Write a program to find the difference between two strings using sets.
-38. Write a program to find vowels present in a string using sets.
-39. Write a program to check whether two strings contain the same characters.
-40. Write a program to find common characters between two strings.
-Section 5 – Set Comprehension
-41. Write a program to create a set of squares from numbers 1–10 using set
-comprehension.
-42. Write a program to create a set of cubes using set comprehension.
-43. Write a program to create a set of even numbers from 1–20 using set comprehension.
-44. Write a program to create a set of odd numbers using set comprehension.
-45. Write a program to create a set containing lengths of words in a sentence."""
-
 """ Section 4 – Logical Set Problems"""
+
+""" 31. Write a program to find common elements between two lists using sets."""
+# lst1= [1,2,3,4,5,6,7]
+# lst2 = [4,5,6,7,8,9,10]
+
+# lst3 = set(lst1).intersection(set(lst2))
+# print(lst3)
+
+""" 32. Write a program to find unique elements from two lists."""
+
+# lst1= [1,2,3,4,5,6,7]
+# lst2 = [4,5,6,7,8,9,10]
+# print(lst1)
+# print(lst2)
+
+# lst3 = set(lst1).symmetric_difference(set(lst2))
+# print(lst3)
+
+""" 33. Write a program to find elements present in the first list but not in the second list."""
+
+# lst1= [1,2,3,4,5,6,7]
+# lst2 = [4,5,6,7,8,9,10]
+# print(lst1)
+# print(lst2)
+
+# lst3 = set(lst1).difference(set(lst2))
+# print(lst3)
+
+""" 34. Write a program to remove duplicates from a sentence using sets."""
+
+# str1 =" hare rama hare rama rama rama hare hare"
+# str2= str1.split()
+# print(str2)
+# set1 = set(str2)
+# print(set1)
+
+""" 35. Write a program to find unique characters in a string using sets."""
+
+# str1 =" I love you"
+# print(str1)
+# set1 = set(str1)
+# print(set1)
+
+""" 36. Write a program to count unique words in a sentence."""
+
+# str1 =" hare rama hare rama rama rama hare hare"
+# str2= str1.split()
+# print(str2)
+# set1 = set(str2)
+# print(len(set1))
+
+""" 37. Write a program to find the difference between two strings using sets."""
+
+# str1 = "shony gangadharan"
+# str2 = "Priyanka shony"
+
+# set3= set(str1)-set(str2)
+
+# print(set3)
+
+""" 38. Write a program to find vowels present in a string using sets."""
+# str1 = "shony gangadharan"
+# set1= set("AEIOUaeiou")
+# set2 = set1 & set(str1)
+# print(set2)
+
+""" 39. Write a program to check whether two strings contain the same characters."""
+
+# str1 = "welcome"
+# str2 = "melcowe"
+# print(str1, str2)
+
+# if set(str1)==set(str2):
+#     print("Two strings contain the same characters")
+# else:
+#     print("Two strings contain NOT same characters")
+
+
+""" 40. Write a program to find common characters between two strings."""
+
+# str1 = "shony gangadharan"
+# set1= "Priyanka shony"
+# set2 = set(set1) & set(str1)
+# print(set2)
+
+""" Section 5 – Set Comprehension"""
+
+""" 41. Write a program to create a set of squares from numbers 1–10 using set comprehension."""
+
+# set1 = {x**2 for x in range(1,11)}
+# print(set1)
+
+""" 42. Write a program to create a set of cubes using set comprehension."""
+# set1 = {x**3 for x in range(1,11)}
+# print(set1)
+
+""" 43. Write a program to create a set of even numbers from 1–20 using set comprehension."""
+
+# set1 = {x for x in range(1,21) if x%2==0}
+# print(set1)
+
+""" 44. Write a program to create a set of odd numbers using set comprehension."""
+
+# set1 = {x for x in range(1,21) if x%2!=0}
+# print(set1)
+
+""" 45. Write a program to create a set containing lengths of words in a sentence."""
+
+# str1="aana alrodu alararal aana kuthi"
+# lst= str1.split()
+# print(lst)
+# set1=set()
+# for x in lst:
+#     set1.add(len(x))
+
+# print(set1)
