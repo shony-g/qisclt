@@ -114,3 +114,54 @@ Section 4: Logical / Problem Solving
 #         a=lst.count(x)
 
 # print(f"highest frequency {a} element in a list is {b}")
+
+"""pract"""
+# data = [(1,5),(3,2),(4,8)]
+
+# datadic = dict(data)
+
+# print(datadic)
+
+# keyDataSort = sorted(datadic,key=datadic.get)
+
+# # print(keyDataSort)
+
+# findic = {x:datadic[x] for x in keyDataSort}
+
+# print(findic)
+
+# finlst = list(findic.items())
+
+# print(finlst)
+
+# samMatri= [[1,2,3],[4,5,6],[7,8,9]]
+
+# s1= 0
+# print('Matrix:')
+# for x in samMatri:
+#     for y in x:
+#         print(y, end=" ")
+#         s1+=y
+#     print()
+# print()
+# print()
+# print(f"Sum:{s1}")
+
+# tpl = (1,2,3,2,4,2)
+
+# rtol = tpl[::-1]
+# print(rtol)
+# print(tpl.count(2))
+
+# lst =[1,2,{3,4}]
+# print(lst)
+# tup1 = (1,2,{3,4})
+# print(tup1)
+# set1 = {1,2,{3,4}}
+# print(set1)
+
+# nameset = {'koni','moni','soni'}
+# # nameset.add(('aani','sani'))
+# nameset.update( {'quni', 'gani'})
+
+# print(nameset)
