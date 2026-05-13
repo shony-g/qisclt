@@ -1,21 +1,4 @@
-""" Section 1: Basic File Operations
-
-🔹 Section 5: Intermediate Tasks
-Search for a record by name.
-Update age of a specific person and rewrite file.
-Delete a record based on ID.
-Sort data by Name alphabetically.
-Group data by City and display counts.
-Find top 5 oldest people.
-Find average age per city.
-Validate data (check for missing values).
-Handle exceptions while opening file.
-Build a menu-driven program:
-View records
-Add record
-Delete record
-Search record
-"""
+""" Section 1: Basic File Operations """
 
 """ Open the CSV file using open() in read mode and print its contents."""
 # with open ("sample_data_50.csv",'r') as f:
@@ -346,14 +329,210 @@ Search record
 #         for y in acc:
 #             bcc.writerow(y)
 
-""" 🔹 Section 4: Data Processing
-Calculate average age of all records.
-Find youngest person in the dataset.
-Find oldest person in the dataset.
-Count how many people are from each city.
-Display names of people whose age is between 25–30.
-Replace all city names "Delhi" with "New Delhi".
-Convert all names to lowercase.
-Add a new column "Status" (Adult/Young based on age).
-Create a new CSV with only unique cities.
-Merge two CSV files (create another sample file)."""
+""" 🔹 Section 4: Data Processing"""
+
+""" Calculate average age of all records."""
+# import csv
+# tot =0
+# count = 0
+
+# with open ("sample_data_50.csv",'r') as f:
+#     abb = csv.DictReader(f)
+#     for x in abb:
+#         tot += int(x['Age'])
+#         count+=1
+
+# avg = tot/count
+
+# print(avg)
+
+""" Find youngest person in the dataset."""
+
+# import csv
+# yPer =""
+# yAge = 100
+
+# with open ("sample_data_50.csv",'r') as f:
+#     abb = csv.DictReader(f)
+#     for x in abb:
+#         if int(x['Age']) < yAge:
+#             yPer = x
+#             yAge = int(x['Age'])
+      
+
+# print(yPer)
+
+""" Find oldest person in the dataset."""
+
+# import csv
+# yPer =""
+# yAge = 0
+
+# with open ("sample_data_50.csv",'r') as f:
+#     abb = csv.DictReader(f)
+#     for x in abb:
+#         if int(x['Age']) > yAge:
+#             yPer = x
+#             yAge = int(x['Age'])
+      
+
+# print(yPer)
+
+""" Count how many people are from each city."""
+
+# import csv
+
+# city_count = {}
+
+# with open ('sample_data_50.csv', 'r')as f:
+#     abb = csv.DictReader(f)
+
+#     for x in abb:
+#         city = x['City']
+
+#         if city in city_count:
+#             city_count[city] += 1
+#         else:
+#             city_count[city] = 1
+
+# print(city_count)
+
+""" Display names of people whose age is between 25–30."""
+
+# import csv
+# new_data = set()
+# with open ("sample_data_50.csv",'r') as f:
+#     abb = csv.DictReader(f)
+
+#     with open('agename.txt', 'w') as f2:
+#         for x in abb:
+#             age = int(x['Age'])
+
+#             if 25<age<30:
+#                 f2.write(x['Name'] + "\n")
+
+    # with open('newcsv4.csv','w', newline="")as f1:
+    #     fname= ['ID', 'Name','Age','City']
+    #     bcc = csv.DictWriter(f1, fieldnames=fname)
+
+    #     bcc.writeheader()
+
+    #     for x in abb:
+    #         if 25 < int(x['Age']) <30:
+    #             bcc.writerow(x)
+
+    
+""" Replace all city names "Delhi" with "New Delhi"."""
+
+# import csv
+# new_data = set()
+# with open ("sample_data_50.csv",'r') as f:
+#     abb = csv.DictReader(f)
+
+#     with open('newcsv4.csv','w', newline="")as f1:
+#         fname= ['ID', 'Name','Age','City']
+#         bcc = csv.DictWriter(f1, fieldnames=fname)
+
+#         bcc.writeheader()
+
+#         for x in abb:
+#             if x['City'] == "Delhi":
+#                 x['City'] = 'New Delhi'
+#                 bcc.writerow(x)
+#             else:
+#                 bcc.writerow(x)
+
+""" Convert all names to lowercase."""
+
+# import csv
+
+# with open ("sample_data_50.csv",'r') as f:
+#     abb = csv.DictReader(f)
+
+#     with open('newcsv4.csv','w', newline="")as f1:
+#         fname= ['ID', 'Name','Age','City']
+#         bcc = csv.DictWriter(f1, fieldnames=fname)
+
+#         bcc.writeheader()
+
+#         for x in abb:
+#             x['Name'] = x['Name'].lower()
+#             bcc.writerow(x)
+
+""" Add a new column "Status" (Adult/Young based on age)."""
+
+# import csv
+
+# with open ("sample_data_50.csv",'r') as f:
+#     abb = csv.DictReader(f)
+
+#     with open('newcsv4.csv','w', newline="")as f1:
+#         fname= ['ID', 'Name','Age','City','Status']
+#         bcc = csv.DictWriter(f1, fieldnames=fname)
+
+#         bcc.writeheader()
+
+#         for x in abb:
+#             age = int(x['Age'])
+
+#             if age > 30:
+#                 x['Status'] = 'Adult'
+#             else:
+#                 x['Status'] = 'Young'
+            
+#             bcc.writerow(x)
+
+""" Create a new CSV with only unique cities."""
+
+# import csv
+
+# city_count = set()
+
+# with open ('sample_data_50.csv', 'r')as f:
+#     abb = csv.DictReader(f)
+
+#     for x in abb:
+#         city = x['City']
+
+#         if city not in city_count:
+#             city_count.add(city)
+        
+
+# print(city_count)
+
+""" Merge two CSV files (create another sample file)."""
+
+# import csv
+
+# with open("merge.csv",'w', newline="") as fk:
+#     eaa = csv.writer(fk)
+
+#     with open ('sample_data_50.csv', 'r')as f:
+#         abb = csv.reader(f)
+
+#         for x in abb:
+#             eaa.writerow(x)
+
+#     with open ('newcsv4.csv', 'r')as f1:
+#         acc = csv.reader(f1)
+
+#         next(acc)
+
+#         for x in acc:
+#             eaa.writerow(x)
+
+""" 🔹 Section 5: Intermediate Tasks
+Search for a record by name.
+Update age of a specific person and rewrite file.
+Delete a record based on ID.
+Sort data by Name alphabetically.
+Group data by City and display counts.
+Find top 5 oldest people.
+Find average age per city.
+Validate data (check for missing values).
+Handle exceptions while opening file.
+Build a menu-driven program:
+View records
+Add record
+Delete record
+Search record"""
