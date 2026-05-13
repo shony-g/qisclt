@@ -1,16 +1,5 @@
 """ 🔹 Section A: Basic File Opening (r mode)
 
-🔹 Section C: Read + Write Mode (r+)
-Write a program to open a file in r+ mode and display content.
-Write a program to read a file and then write additional data using r+.
-Write a program to overwrite the beginning of a file using r+.
-Write a program to modify the first line of a file using r+.
-Write a program to read and append data using r+.
-Write a program to move file pointer and write data.
-Write a program to demonstrate pointer position in r+ mode.
-Write a program to update specific content in a file using r+.
-Write a program to replace a word in a file using r+.
-Write a program to read and rewrite file content using r+.
 🔹 Section D: Mixed Practice Questions
 Write a program to copy content from one file to another using r and w.
 Write a program to merge two files into a third file.
@@ -220,3 +209,15 @@ cont = "7, Kiran,26, Kochi 8,Hannah,36, Bangalore 9,Ibrahim,31, Hyderabad 10,Bob
 # with open('test.txt', 'w')as f:
 #     for x in range (2,21,2):
 #         f.write( str(x) + " ")
+
+""" 🔹 Section C: Read + Write Mode (r+)
+Write a program to open a file in r+ mode and display content.
+Write a program to read a file and then write additional data using r+.
+Write a program to overwrite the beginning of a file using r+.
+Write a program to modify the first line of a file using r+.
+Write a program to read and append data using r+.
+Write a program to move file pointer and write data.
+Write a program to demonstrate pointer position in r+ mode.
+Write a program to update specific content in a file using r+.
+Write a program to replace a word in a file using r+.
+Write a program to read and rewrite file content using r+."""

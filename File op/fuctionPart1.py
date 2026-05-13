@@ -755,13 +755,13 @@ SECTION G - BUILT-IN VS USER-DEFINED FUNCTIONS
 
 66. Write a function `average(numbers: list[float]) -> float`"""
 
-def print_numbers(n):
+# def print_numbers(n):
 
-    if n == 0:
-        return
+#     if n == 0:
+#         return
 
-    print_numbers(n - 1)
+#     print_numbers(n - 1)
 
-    print(n)
+#     print(n)
 
-print_numbers(5)
+# print_numbers(5)
