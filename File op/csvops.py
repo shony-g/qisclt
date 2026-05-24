@@ -88,7 +88,7 @@
 """ Print all rows as dictionaries using DictReader."""
 # import csv
 
-# with open ('sample_data_50.csv', 'r')as f:
+# with open ('sample_data_50.csv','r')as f:
 #     abb = csv.DictReader(f)
 
 #     for x in abb:
@@ -536,3 +536,10 @@ View records
 Add record
 Delete record
 Search record"""
+import csv
+with open ("sdap.csv",'a+', newline="") as f:
+        abb = csv.writer(f)
+        acc = csv.DictReader(f)
+        # sno = acc[S NO]
+        print(acc)
+        abb.writerow([])
