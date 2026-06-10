@@ -63,10 +63,15 @@
 #     def show_add(self):
 #         print(self.result)
 
+#     def __mul__(self,other):
+#         return self.b * other.b
+    
 # a = Complex_num(5,'g')
 # b = Complex_num(6,3)
+# c = a*b
 # a.show_add()
 # b.show_add()
+# print(c)
 
 """ 84. Overload comparison operators for students based on marks."""
 
@@ -322,10 +327,6 @@
 
 """ ABSTRACTION QUESTIONS
 
-112. Create abstract methods:
-   - login()
-   - logout()
-
 113. Create:
    - Abstract Vehicle
    - Bike
@@ -336,8 +337,6 @@
    - Circle
    - Rectangle
 
-115. Build an online food ordering abstraction system.
-
 116. Create a cloud service provider abstraction.
 
 117. Create a machine learning model abstraction.
@@ -346,6 +345,159 @@
 
 119. Create an e-commerce delivery abstraction.
 
-120. Build a hospital appointment abstraction system."""
+"""
 
 """ 111. Create an abstract class for payment systems."""
+
+# from abc import ABC, abstractmethod
+
+# class Payement(ABC):
+    
+#     @abstractmethod
+#     def payment (self, amount):
+#         self.amount = amount
+#         print('payment completed.')
+
+#     @abstractmethod
+#     def show_payment(self):
+#         print(f'{self.amount} paid')
+
+# class CrediCard(Payement):
+    
+#     def payment(self, amount):
+#         return super().payment(amount)
+    
+#     def show_payment(self):
+#         return super().show_payment()
+
+# class UPI (Payement):
+    
+#     def payment(self, amount):
+#         return super().payment(amount)
+    
+#     def show_payment(self):
+#         return super().show_payment()
+
+# a10 = CrediCard()
+# a20 = UPI()
+
+# a10.payment(5000)
+# a10.show_payment()
+# a20.payment(4000)
+# a20.show_payment()
+
+""" 112. Create abstract methods:
+   - login()
+   - logout()"""
+
+# from abc import ABC, abstractmethod
+
+# class User (ABC):
+    
+#     @abstractmethod
+#     def login (self,name):
+#         self.name= name
+#         print('User logged in')
+
+#     @abstractmethod
+#     def logout(self):
+#         print('user logout')
+
+# class Student(User):
+    
+#     def login(self,name):
+#         self.name= name
+#         super().login(self.name)
+   
+#     def logout(self):
+#         super().logout()
+
+# a10 = Student()
+# a10.login('shony')
+# a10.logout()
+
+""" 115. Build an online food ordering abstraction system."""
+
+# from abc import ABC, abstractmethod
+
+# class FoodOrder(ABC):
+    
+#     def __init__(self, name, food,price):
+#         self.cus_name = name
+#         self.food = food
+#         self.price = price
+    
+#     @abstractmethod
+#     def placeorder (self):
+#         print(f'Customer Name {self.cus_name}')
+#         print (f'Food {self.food}')
+#         print(f'Price {self.price}')
+        
+    
+#     @abstractmethod
+#     def cancelorder(self):
+#         print(f'Delivery cancelled')
+#         print(f'Customer Name {self.cus_name}')
+#         print (f'Food {self.food}')
+#         print(f'Price {self.price} returned')
+        
+    
+
+# class Delorder (FoodOrder):
+    
+#     def placeorder(self):
+#         print(f'Delivery order placed')
+#         return super().placeorder()
+    
+#     def cancelorder(self):
+#         return super().cancelorder()
+    
+# class PickupOrder(FoodOrder):
+    
+#     def placeorder(self):
+#         print(f'Order picked up')
+#         return super().placeorder()
+    
+#     def cancelorder(self):
+#         return super().cancelorder()
+    
+# a10 = Delorder('shony', 'puttu', 150)
+# a20 = PickupOrder( 'shony','puttu',150)
+# a10.placeorder()
+# a10.cancelorder()
+
+# a20.placeorder()
+# a20.cancelorder()
+
+""" 120. Build a hospital appointment abstraction system."""
+
+# from abc import ABC, abstractmethod
+
+# class Hospital(ABC):
+    
+#     def __init__(self, name,doct):
+#         self.cus_name = name
+#         self.doct = doct
+
+#     @abstractmethod
+#     def appontment(self):
+#         print(f'Customer Name {self.cus_name}')
+#         print (f'apponment registered for {self.doct}')
+        
+#     @abstractmethod
+#     def cancelorder(self):
+#         print(f'appontment cancelled')
+        
+
+# class User(Hospital):
+    
+#     def appontment(self):
+#         print(f'getting appoinment')
+#         return super().appontment()
+    
+#     def cancelorder(self):
+#         return super().cancelorder()
+
+# a10 = User('shony', 'OP')
+# a10.appontment()
+# a10.cancelorder()

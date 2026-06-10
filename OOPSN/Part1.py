@@ -1068,3 +1068,98 @@
 39. Create a form builder using dynamic attributes.
 
 40. Create a dynamic inventory management system."""
+
+
+# class Student:
+#    school_name = 'QIS'
+#    tot_student = 1
+
+#    def __init__(self, name, age, course):
+#       self.name = name
+#       self.age = age
+#       self.course = course
+#       self.std_id = Student.tot_student
+        
+#       Student.tot_student+=1
+
+#    def display_details(self):
+#       print(f"School Name : {self.school_name}")
+#       print('Student ID :', getattr(self,'std_id','Student ID not available'))
+#       print('Name :', getattr(self,'name','Name not available'))
+#       print("Age :",getattr(self,'age', 'Age not availabe'))
+#       print('Course :', getattr(self,'course','Course not available'))
+#       print('Marks :',getattr(self,'marks','Marks not available'))
+#       print()
+
+# class Student_manager:
+    
+#    def __init__(self):
+#       self.students = []
+
+#    def add_student(self,name, age, course):
+#       user = Student(name,age,course)
+#       self.students.append(user)
+#       print('Student add successfully')
+   
+#    def show_all_student (self):
+#       if not self.students:
+#          print("No Student found")
+#          return
+#       for user in self.students:
+#          user.display_details()
+   
+#    def find_student(self,student_id):
+#       for user in self.students:
+#          if user.std_id == student_id:
+#             return user
+#       return None
+   
+#    def get_atribute(self,student_id, atribute):
+#       user = self.find_student(student_id)
+#       if user:
+#          a = getattr(user,atribute,'atribute not found')
+#          print(f"{atribute} :{a}")
+#       else:
+#          print('Student not found')
+
+#    def update_atribute (self, student_id,atribute,value):
+#       user =self.find_student(student_id)
+#       if user:
+#          setattr(user, atribute,value)
+#          print(f"{atribute} update successfully")
+#       else:
+#          print('User not found')
+
+#    def delete_atribute(self,student_id,atribute):
+#       user = self.find_student(student_id)
+#       if user:
+#          if hasattr(user,atribute):
+#             delattr(user,atribute)
+#             print(f'{atribute} delete sucessfully')
+#          else:
+#             print(f'{atribute} not found')
+#       else:
+#          print('Student not found')
+
+# manager = Student_manager()
+
+# manager.add_student('Shony',44,'Python')
+# manager.add_student('Priya',41,'Java')
+# manager.add_student('Thejas',21,'Data science')
+# manager.add_student('Koya',24,'Data science')
+
+# manager.show_all_student()
+
+# # print(manager.find_student(4))
+
+# manager.get_atribute(4,'name')
+# manager.get_atribute(2,'marks')
+# manager.get_atribute(3,'age')
+
+# manager.update_atribute(4,'name','pathu')
+# manager.update_atribute(1,'age','46')
+
+# manager.show_all_student()
+
+# manager.delete_atribute(4,'age')
+# manager.show_all_student()
