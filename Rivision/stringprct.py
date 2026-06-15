@@ -37,7 +37,9 @@ BASIC LEVEL
 
 
 14. Authenticate a user: Prompt for username and password. Print "Access Granted" only if both match.
-
+14. Write a program to print characters of a string using a for loop.
+15. Write a program to count the number of characters in a string.
+16. Write a program to count vowels in a string.
 
 22. Check if a given string starts with a capital letter and ends with a period.
 23. Determine if a person is a Senior Citizen (60+), Adult (18-59), or Minor (<18).

@@ -112,6 +112,9 @@ Section 5: Interview-Oriented Questions
 62. Write a program to implement a stack using a list and explain push/pop.
 8
 63. Write a program to remove duplicates while preserving order.
+42. Interview Question: Explain the "Truthiness" of an empty list [] in an if-statement. Write a demo.
+45. Using 'in' keyword: Check if a user-inputted fruit exists in a predefined "basket" list.
+46. Efficient Logic: Given a list of integers, print "All Positive" if no number is < 0.
 9
 64. Explain the difference between mutable and immutable data structures in Python.
 10 65. Write a Python program to simulate a simple task queue using lists."""

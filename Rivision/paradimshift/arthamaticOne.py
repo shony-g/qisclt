@@ -80,6 +80,7 @@
     b) Remaining days
     Check if a given year is a leap year.
     Write a program that takes a month number (1-12) and prints the number of days in that month.
+    Check if a given date (day, month, year) is logically valid (e.g., no Feb 30).
 """
 # from datetime import date, timedelta
 
@@ -90,9 +91,18 @@
 #         self.month = mm
 #         self.year = yy
 #         self.cal_mon = {1:'January',2:'February',3:'March',4:'April',5:'May',6:'June',7:'July',8:'August',9:'September',10:'October',11:'November',12:'December'}
-#         self.start_dd = date(self.year, self.month, self.day)
+#         try:
+#             self.start_dd = date(self.year, self.month, self.day)
+#         except:
+#             self.start_dd = None
+#             print(f"The date you provided is {dd}-{mm}-{yy}")
+#             print("Please check the date and month properly for the year")
     
 #     def nthday(self,nth):
+#         if self.start_dd is None:
+#             print("Cannot calculate because the starting date is invalid")
+#             return
+        
 #         self.count_day = self.start_dd + timedelta(days=nth)
 #         print(f"Start date : {self.start_dd}")
 #         print(f"Start day : {self.start_dd.strftime('%A')}")
@@ -103,31 +113,36 @@
 #         print(f"{nth} day have {num_week} weeks and {days_rem} days")
     
 #     def leap_year(self):
-#         if self.year == 0 or (self.year%4 == 0 and self.year %100 != 0):
+#         if (self.year % 400 == 0) or (self.year%4 == 0 and self.year %100 != 0):
 #             print (f"{self.year} is a leap year")
 #             return True
 #         else:
-#             print("Not a leap year")
+#             print(f"{self.year} is not a leap year")
 #             return False
     
 #     def month_days (self):
 #         mm= self.month
-#         if mm ==1 or mm==3 or mm ==5 or mm==7 or mm==8 or mm==10 or mm== 12:
+
+#         if mm not in self.cal_mon:
+#             print("Invalid month number")
+#         elif mm in [1, 3, 5, 7, 8, 10, 12]:
 #             print(f"{self.year} {self.cal_mon[mm]} has 31 Days")
-#         elif mm==4 or mm==6 or mm==9 or mm == 11:
+#         elif mm in [4, 6, 9, 11]:
 #             print(f"{self.year} {self.cal_mon[mm]} has 30 Days")
-#         elif self.leap_year():
-#             print(f"{self.year} {self.cal_mon[mm]} has 29 Days")
-#         else:
-#             print(f"{self.year} {self.cal_mon[mm]} has 28 Days")
+#         elif mm == 2:
+#             if self.leap_year():
+#                 print(f"{self.year} {self.cal_mon[mm]} has 29 Days")
+#             else:
+#                 print(f"{self.year} {self.cal_mon[mm]} has 28 Days")
 
 # check1 = Datetime_sho(2,2,2026)
-# # check1.nthday(100)
+# check1.nthday(150)
 # check1.month_days()
 
 """3.  Write a program to input total seconds and convert it into:
     a) Minutes
-    b) Remaining seconds"""
+    b) Remaining seconds
+    Time Conversion: Convert 24hr format to 12hr format using conditions."""
 
 # class Timecircus:
 #     def __init__(self):
@@ -165,13 +180,27 @@
 #             if y>0:
 #                 print(x ,':', y)
 
-         
+# class TimeCon (Timecircus):
+#     def __init__(self):
+#         super().__init__()
+    
+#     def twlve224(self,tnow, tmin=0):
+#         self.clock = f"{tnow}:{tmin}AM" if tnow <=12 else f"{tnow -12}:{tmin:02d }PM"
+#         print(self.clock)
+    
+#     def twnty212(self,tnow, tmin,am):
+#         self.clock = f"{tnow}:{tmin}" if am =='AM' else f"{tnow +12}:{tmin:02d }"
+#         print(self.clock)
+
 
 # t1=Timecircus()
-# # t1.sec_in(72001122222)
-# # t1.days_in(375)
+# t1.sec_in(72001122222)
+# t1.days_in(375)
 # t1.min_in(4000)
 # t1.display_time()
+# t2 = TimeCon()
+# t2.twlve224(1,12)
+# t2.twnty212(0,0,'AM')
 
 
 """ 5. Write a program to input two numbers and swap them using arithmetic operators (without using a third variable).
@@ -234,4 +263,12 @@
 
 # emp1 = Salary(75000)
 # emp1.payslip()
+
+""" Rewrite an if-else block that finds the minimum of two numbers into a single-line ternary expression.
+Write a condition that avoids a "DivisionByZero" error"""
+
+# a_num= float(input("Please ennter first number :"))
+# b_num= float(input("Please ennter second number :"))
+# c_num = 'Not divisible by zero' if b_num == 0 else a_num/b_num
+# print(c_num)
 
